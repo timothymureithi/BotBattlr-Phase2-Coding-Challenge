@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState, useState} from "react";
 import YourBotArmy from "./YourBotArmy";
 import BotCollection from "./BotCollection";
 
@@ -7,7 +7,17 @@ for all of the pieces of the page. */
 
 function BotsPage() {
 
-  
+  const [bots, setBots] = useState([]);
+  const [botArmy, setBotsArmy] = useState([]);
+
+  //fetch request
+  useEffect(() =>{
+    fetch("http://localhost:8002/bots")
+    .then(response => response.json())
+    .then(bots => setBots(bots))
+  }, []);
+
+
   return (
     <div>
       <YourBotArmy />
