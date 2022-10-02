@@ -66,7 +66,7 @@ function BotSpecs({ bot }) {
                 )
               }
             >
-              Enlist
+              Enlist 
             </button>
           </div>
         </div>
