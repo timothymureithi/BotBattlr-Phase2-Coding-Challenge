@@ -12,7 +12,7 @@ function BotsPage() {
 
   //fetch request to render profiles
   useEffect(() => {
-    fetch("http://localhost:8002/bots")
+    fetch("https://my-json-server.typicode.com/timothymureithi/botjson//bots")
     .then(response => response.json())
     .then(bots => setBots(bots))
   }, []);
@@ -34,7 +34,7 @@ function BotsPage() {
     setBots(filterBots)
     setBotsArmy(filterBotArmy)
 
-    fetch(`http://localhost:8002/bots/${botData.id}`, {
+    fetch(`https://my-json-server.typicode.com/timothymureithi/botjson//bots/${botData.id}`, {
       method: "DELETE"
     })
   }

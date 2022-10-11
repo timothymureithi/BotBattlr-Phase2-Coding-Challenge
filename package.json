@@ -1,5 +1,6 @@
 {
   "name": "react-hooks-bot-battlr-code-challenge",
+  "homepage": "https://timothymureithi.github.io/BotBattlr-Phase2-Coding-Challenge",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -14,7 +15,9 @@
   },
   "scripts": {
     "start": "PORT=8000 react-scripts start",
-    "server": "json-server --watch db.json -p 8002"
+    "server": "json-server --watch db.json -p 8002",
+    "predeploy": "npm run build",
+  "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
